@@ -39,7 +39,7 @@ section {
 }
 
 h1 {
-	font: normal normal 700 44px/1.2 'Instrument Sans', sans-serif;
+	font: normal normal 600 44px/1.2 'Instrument Sans', sans-serif;
 	color: var(--twine);
 	text-align: center;
 	margin: 40px auto 20px auto;
@@ -86,12 +86,12 @@ p .sources a {
 p .sources a:before {
    content: "•";
    position: absolute;
-   left: -18px;
+   left: -14px;
    color: var(--sundance);
 }
 
 article p:first-child {
-	width: var(--center-max-width);
+	max-width: var(--center-max-width);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -164,13 +164,15 @@ footer a span {
 
 @media only screen and (max-width: 1200px) {
 	h1 {
-		font: normal normal 700 30px/1.2 'Instrument Sans', sans-serif;
-		margin: 32px auto 32px auto !important;
+		font: normal normal 600 30px/1.2 'Instrument Sans', sans-serif;
 	}
 
 	h2 {
-		font: normal normal 700 26px/1.2 'Instrument Sans', sans-serif;
-		margin: 32px auto 32px auto !important;
+		font: normal normal 500 26px/1.2 'Instrument Sans', sans-serif;
+	}
+
+	p a {
+		font: normal normal 600 18px/1.2 'Instrument Sans', sans-serif;
 	}
 	
 	section {
