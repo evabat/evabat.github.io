@@ -14,6 +14,7 @@
   --vertical-margin: 100px;
   --horizontal-margin: 0;
   --bg-color: var(--cod-gray);
+  --center-max-width: 880px;
 }
 
 body {
@@ -59,14 +60,39 @@ p {
 p a {
 	color: var(--sundance);
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 26px;
 	transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-p u {
-	font-size: 18px;
+p b {
+	font-size: 22px;
 	line-height: 1.8;
+	display: block;
 }
+
+p .sources {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: initial;
+    margin: 0 auto;
+    text-align: left;
+}
+
+article p:first-child {
+	width: var(--center-max-width);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+article p:nth-child(2),
+article p:nth-child(3) {
+	text-align: center;
+	margin-top: 25px;;
+}
+
 
 a:hover,
 a:focus {
@@ -74,33 +100,6 @@ a:focus {
 	font-weight: 800;
 }
 
-.video-section {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-
-.video-desc {
-  color: #bbb;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.video-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 450px; /* σταθερό ύψος = πιο ισορροπημένο */
-  display: block;
-  border: none;
-}
 
 .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 1rem; }
 
