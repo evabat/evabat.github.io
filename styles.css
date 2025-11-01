@@ -79,6 +79,17 @@ p .sources {
     text-align: left;
 }
 
+p .sources a {
+   position: relative;
+}
+
+p .sources a:before {
+   content: "•";
+   position: absolute;
+   left: -18px;
+   color: var(--sundance);
+}
+
 article p:first-child {
 	width: var(--center-max-width);
 	margin: 0 auto;
