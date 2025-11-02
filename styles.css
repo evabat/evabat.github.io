@@ -6,6 +6,7 @@
   --sundance: #C8A85A;
   --driftwood: #B68B4C;
   --twine: #C8A15D;
+  --twine-opacity-60: rgba(200, 161, 93, 0.6);
   --crail: #C05640;
   --brick-red: #D42B54;
   --charm: #D2607C;
@@ -31,11 +32,37 @@ section {
 	width: calc(100% - 20vw);
 	min-width: 300px;
 	display: block;
-	padding: 20px 40px;
+	padding: 40px 20px;
 	border-radius: 18px;
-	box-shadow: 0 13px 20px var(--salt-box-opacity-22);
-	/* margin: 0 auto calc(var(--vertical-margin) * 2) auto; */
+	/* border: 1px solid var(--sundance); */
+	/* box-shadow: 10px 10px 30px var(--twine-opacity-60); */
 	margin: 0 auto 20px auto;
+	position: relative;
+	background-color: var(--cod-gray);
+}
+
+section::before,
+section::after {
+	content: "";
+	position: absolute;
+	background: transparent radial-gradient(closest-side at 50% 50%,
+	 #000000 0%,
+	 rgba(0, 0, 0, 0.922) 20%,
+	 rgba(200, 161, 93, 0.5) 40%,
+	 rgba(182, 139, 76, 0) 100%) 0% 0% no-repeat padding-box;
+	width: 75%;
+    height: 117%;
+    border-radius: 100%;
+	z-index: -1;
+	top: -20%;
+}
+
+section::before {
+    left: -10%;
+}
+
+section::after {
+    right: -10%;
 }
 
 h1 {
@@ -154,6 +181,14 @@ footer a {
 	text-decoration: none;
 }
 
+footer a,
+footer span,
+footer i {
+	background-color: var(--cod-gray);
+	padding: 5px;
+	border-radius: 3px;
+}
+
 footer a:hover{
 	color:var(--brick-red);
 }
@@ -185,5 +220,10 @@ footer a span {
 		margin: 0 auto calc(var(--vertical-margin) / 2 - 40px) auto !important;
 	}
 
+	section::before,
+	section::after {
+		width: 100vw;
+		height: 100vh;
+	}
 }
 
