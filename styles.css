@@ -118,7 +118,7 @@ p .sources a:before {
    color: var(--sundance);
 }
 
-article p:first-child {
+article p.description {
 	max-width: var(--center-max-width);
 	margin: 0 auto;
 	display: flex;
@@ -126,10 +126,10 @@ article p:first-child {
 	gap: 10px;
 }
 
-article p:nth-child(2),
-article p:nth-child(3) {
+article p.videos,
+article p.photos {
 	text-align: center;
-	margin-top: 25px;;
+	margin-top: 25px;
 }
 
 
