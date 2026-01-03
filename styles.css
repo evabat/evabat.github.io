@@ -34,14 +34,15 @@ section {
 	display: block;
 	padding: 40px 20px;
 	border-radius: 18px;
+	box-shadow: 10px 10px 40px var(--twine-opacity-60);
 	/* border: 1px solid var(--sundance); */
-	/* box-shadow: 10px 10px 30px var(--twine-opacity-60); */
-	margin: 0 auto 20px auto;
+	margin: 40px auto 40px auto;
 	position: relative;
 	background-color: var(--cod-gray);
 }
 
-section::before,
+
+/* section::before,
 section::after {
 	content: "";
 	position: absolute;
@@ -64,6 +65,7 @@ section::before {
 section::after {
     right: -10%;
 }
+	*/
 
 h1 {
 	font: normal normal 600 44px/1.2 'Instrument Sans', sans-serif;
@@ -111,12 +113,12 @@ p .sources a {
    position: relative;
 }
 
-p .sources a:before {
+/* p .sources a:before {
    content: "•";
    position: absolute;
    left: -14px;
    color: var(--sundance);
-}
+} */
 
 article p.description {
 	max-width: var(--center-max-width);
